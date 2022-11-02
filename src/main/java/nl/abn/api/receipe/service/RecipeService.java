@@ -57,7 +57,6 @@ public class RecipeService {
      */
     @Transactional(readOnly = true)
     public List<Recipe> getAllRecipes() {
-        recipeRepository.findAll();
         return recipeMapper.map(recipeRepository.findAll());
     }
 
